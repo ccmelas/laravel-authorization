@@ -25,6 +25,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('create-thread', function($user) {
+           return $user->role === 'moderator';
+        });
     }
 }
