@@ -8,6 +8,9 @@ class Thread extends Model
 {
     protected $guarded = [];
 
+
+    protected $casts = ['user_id' => 'int'];
+
     /**
      * The creator of a thread
      *

@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::post('/threads', 'ThreadsController@store')->name('threads.store');
+Route::post('/threads/{thread}', 'ThreadsController@update')->name('threads.update');
